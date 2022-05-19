@@ -10,5 +10,11 @@ export default {
 
 const Template: ComponentStory<typeof Item> = (args) => <Item {...args} />;
 
+const data = {
+  name: "Item Name",
+  description: "Item Description",
+  image: "https://via.placeholder.com/300",
+};
+
 export const Default = Template.bind({});
-Default.args = { x: 1 };
+Default.args = { ...data };
