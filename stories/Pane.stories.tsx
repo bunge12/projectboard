@@ -11,4 +11,4 @@ export default {
 const Template: ComponentStory<typeof Pane> = (args) => <Pane {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = { x: 1 };
