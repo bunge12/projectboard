@@ -1,14 +1,17 @@
 import React from "react";
-import { Card } from "@mantine/core";
-
+import { Card, Text } from "@mantine/core";
+// import type ItemProps from "./Item";
+import { ItemProps } from "./Item";
 interface PaneProps {
-  x: number;
+  item: Array<ItemProps>;
 }
 
-export default function Pane({ x }: PaneProps) {
+export default function Pane({ item }: PaneProps) {
   return (
     <Card>
-      <Card.Section>Pane Title {x}</Card.Section>
+      <Card.Section>
+        <Text>Pane Title</Text>
+      </Card.Section>
     </Card>
   );
 }

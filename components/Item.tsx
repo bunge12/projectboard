@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, Text, Image } from "@mantine/core";
 
-type Props = {
+export interface ItemProps {
   name: string;
   description: string;
   image: string;
-};
+}
 
-export default function Item({ name, description, image }: Props) {
+export default function Item({ name, description, image }: ItemProps) {
   return (
     <Card>
       <Card.Section>
