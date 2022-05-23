@@ -13,7 +13,7 @@ export default function Pane({ title, items }: PaneProps) {
         width: "350px",
         backgroundColor: "lightgray",
         overflowY: "scroll",
-        height: "100vh",
+        height: "97vh",
       }}
     >
       <Card.Section>
