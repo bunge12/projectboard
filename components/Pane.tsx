@@ -8,10 +8,18 @@ interface PaneProps {
 
 export default function Pane({ title, items }: PaneProps) {
   return (
-    <Card style={{ width: "350px", backgroundColor: "lightgray" }}>
+    <Card
+      style={{
+        width: "350px",
+        backgroundColor: "lightgray",
+        overflowY: "scroll",
+        height: "100vh",
+      }}
+    >
       <Card.Section>
         <Text size="lg">{title}</Text>
       </Card.Section>
+
       <Stack>
         {items.map((item) => {
           return (
