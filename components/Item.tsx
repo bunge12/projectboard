@@ -11,7 +11,7 @@ export default function Item({ name, description, image }: ItemProps) {
   return (
     <Card>
       <Card.Section>
-        <Image src={image} width={300} height={300} />
+        <Image src={image} width="100%" height="100%" />
       </Card.Section>
       <Text>{name}</Text>
       <Text>{description}</Text>
