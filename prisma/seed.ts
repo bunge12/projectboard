@@ -1,11 +1,23 @@
+// npx prisma db seed
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
   const user = await prisma.user.create({
     data: {
-      email: "test@prisma.io",
       name: "Alice",
+      email: "test@prisma.io",
+      boards: {
+        create: {
+          name: "My first board",
+          items: {
+            create: [
+              { name: "item1", description: "item1 description" },
+              { name: "item2", description: "item2 description" },
+            ],
+          },
+        },
+      },
     },
   });
 
