@@ -18,3 +18,6 @@ const data = {
 
 export const Default = Template.bind({});
 Default.args = { ...data };
+
+export const NoImage = Template.bind({});
+NoImage.args = { ...data, image: undefined };
