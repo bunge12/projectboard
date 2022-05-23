@@ -1,17 +1,28 @@
 import React from "react";
-import { Card, Text } from "@mantine/core";
-// import type ItemProps from "./Item";
-import { ItemProps } from "./Item";
+import { Card, Stack, Text } from "@mantine/core";
+import Item, { ItemProps } from "./Item";
 interface PaneProps {
-  item: Array<ItemProps>;
+  title: string;
+  items: Array<ItemProps>;
 }
 
-export default function Pane({ item }: PaneProps) {
+export default function Pane({ title, items }: PaneProps) {
   return (
-    <Card>
+    <Card style={{ width: "350px", backgroundColor: "lightgray" }}>
       <Card.Section>
-        <Text>Pane Title</Text>
+        <Text size="lg">{title}</Text>
       </Card.Section>
+      <Stack>
+        {items.map((item) => {
+          return (
+            <Item
+              name={item.name}
+              description={item.description}
+              image={item.image}
+            />
+          );
+        })}
+      </Stack>
     </Card>
   );
 }
